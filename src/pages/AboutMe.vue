@@ -1,12 +1,15 @@
 <template>
   <div>
+    <!-- <div class="fixed right-32 bottom-24">
+      <a>下载简历</a>
+    </div> -->
     <div class="lg:w-7/12 md:w-9/12 bg-white md:mx-auto md:my-20 mx-5 md:p-20
      p-10 rounded-3xl break-words my-5 shadow-xl ring-1 ring-gray-900/5 opacity-95 backdrop-blur-3xl">
       <div class="flex flex-row items-center">
         <p class="text-5xl font-semibold">{{ modelData.name }}</p>
         <img src="../assets/avatar.png" alt="" class="w-14 h-14 ml-auto">
       </div>
-      <div class="mt-5 flex flex-row items-center">
+      <div class="mt-3 flex flex-row items-center flex-wrap">
         <a class="link red-link" href="https://blog.zyan1226.cn">博客</a>
         <a class="link green-link" href="https://juejin.cn/user/3702810895726344/posts">掘金</a>
         <a class="link purple-link" href="https://gitee.com/zyan1226">Gitee</a>
@@ -38,7 +41,7 @@ export default {
 <style scoped>
 
 .link {
-  @apply text-lg px-3 py-2 font-semibold rounded-md mr-3;
+  @apply text-lg px-3 py-2 font-semibold rounded-md mr-3 mt-2;
   transition: 750ms;
 }
 
