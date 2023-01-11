@@ -21,7 +21,7 @@
         <p class="mt-5 text-lg" v-for="(contentItem,index) in item.content" :key="index">{{ contentItem }}</p>
       </div>
       <p class="text-center mt-20 text-sm text-gray-500">
-        Copyright © 2022 zyan. 保留所有权利。
+        Copyright © 2023 zyan. 保留所有权利。
       </p>
     </div>
   </div>
