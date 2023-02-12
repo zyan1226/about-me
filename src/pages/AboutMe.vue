@@ -3,18 +3,20 @@
     <!-- <div class="fixed right-32 bottom-24">
       <a>下载简历</a>
     </div> -->
-    <div class="lg:w-7/12 md:w-9/12 bg-white md:mx-auto md:my-20 mx-5 md:p-20
+    <div class="lg:w-7/12 sm:w-9/12 bg-white sm:mx-auto sm:my-20 mx-5 sm:p-20
      p-10 rounded-3xl break-words my-5 shadow-xl ring-1 ring-gray-900/5 opacity-95 backdrop-blur-3xl">
-      <div class="flex flex-row items-center">
+      <div class="flex sm:flex-row items-center flex-col">
+        <img src="../assets/avatar.png" alt="" class="w-full sm:hidden">
         <p class="text-5xl font-semibold">{{ modelData.name }}</p>
-        <img src="../assets/avatar.png" alt="" class="w-14 h-14 ml-auto">
+        <img src="../assets/avatar.png" alt="" class="w-14 h-14 ml-auto hidden sm:inline-block">
       </div>
-      <div class="mt-3 flex flex-row items-center flex-wrap">
+      <div class="mt-4 flex flex-row items-center flex-wrap">
         <a class="link red-link" href="https://blog.zyan1226.cn">博客</a>
         <a class="link green-link" href="https://juejin.cn/user/3702810895726344/posts">掘金</a>
         <a class="link purple-link" href="https://gitee.com/zyan1226">Gitee</a>
-        <a class="link rose-link" href="https://unsplash.com/@zyan1226">Unsplash</a>
-        <a class="link gray-link" href="https://space.bilibili.com/124493907">bilibili</a>
+        <a class="link rose-link" href="https://github.com/zyan1226">GitHub</a>
+        <a class="link gray-link" href="https://unsplash.com/@zyan1226">Unsplash</a>
+        <a class="link red-link" href="https://space.bilibili.com/124493907">bilibili</a>
       </div>
       <div v-for="item in modelData.content" :key="item.title">
         <p class="text-2xl font-semibold mt-10">{{ item.title }}</p>
@@ -44,7 +46,7 @@ export default {
 <style scoped>
 
 .link {
-  @apply text-lg px-3 py-2 font-semibold rounded-md mr-3 mt-2;
+  @apply text-lg px-3 py-2 font-semibold rounded-md mr-3 mt-3;
   transition: 750ms;
 }
 
