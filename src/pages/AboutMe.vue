@@ -3,8 +3,8 @@
     <!-- <div class="fixed right-32 bottom-24">
       <a>下载简历</a>
     </div> -->
-    <div class="lg:w-7/12 sm:w-9/12 bg-white sm:mx-auto sm:my-20 mx-5 sm:p-20
-     p-10 rounded-3xl break-words my-5 shadow-xl ring-1 ring-gray-900/5 opacity-95 backdrop-blur-3xl">
+    <div id="box" class="lg:w-7/12 sm:w-9/12 bg-white sm:mx-auto sm:my-20 mx-5 sm:p-20
+         p-10 rounded-3xl break-words my-5 shadow-xl ring-1 ring-gray-900/5 opacity-95 backdrop-blur-3xl">
       <div class="flex sm:flex-row items-center flex-col">
         <img src="../assets/avatar.png" alt="" class="w-full sm:hidden">
         <p class="text-5xl font-semibold">{{ modelData.name }}</p>
@@ -20,7 +20,7 @@
       </div>
       <div v-for="item in modelData.content" :key="item.title">
         <p class="text-2xl font-semibold mt-10">{{ item.title }}</p>
-        <p class="mt-5 text-lg" v-for="(contentItem,index) in item.content" :key="index">{{ contentItem }}</p>
+        <p class="mt-5 text-lg" v-for="(contentItem, index) in item.content" :key="index">{{ contentItem }}</p>
       </div>
       <p class="text-center mt-20 text-sm text-gray-500">
         Copyright © 2023 zyan. 保留所有权利。
@@ -42,8 +42,13 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#box:hover {
+  transform: translateY(-30px)
+}
+#box{
+  transition: 750ms;
+}
 
 .link {
   @apply text-lg px-3 py-2 font-semibold rounded-md mr-3 mt-3;
@@ -93,10 +98,12 @@ export default {
   background-color: #d92fcd;
   transition: 750ms;
 }
-.gray-link{
+
+.gray-link {
   color: #888888;
   background-color: #f3f3f3;
 }
+
 .gray-link:hover {
   color: white;
   background-color: #888888;
