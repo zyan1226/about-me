@@ -44,7 +44,7 @@ export default {
 
 <style scoped>
 #box:hover {
-  transform: translateY(-30px)
+  transform: translateY(-20px)
 }
 #box{
   transition: 750ms;
