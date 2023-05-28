@@ -47,10 +47,6 @@ export default {
   0% {
     margin-top: 20rem;
   }
-
-  100% {
-    margin-top: 5rem;
-  }
 }
 
 #box {
