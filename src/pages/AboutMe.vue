@@ -43,11 +43,20 @@ export default {
 </script>
 
 <style scoped>
-#box:hover {
-  transform: translateY(-20px)
+@keyframes upAnimation {
+  0% {
+    margin-top: 20rem;
+  }
+
+  100% {
+    margin-top: 5rem;
+  }
 }
-#box{
-  transition: 750ms;
+
+#box {
+  animation-name: upAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
 .link {
